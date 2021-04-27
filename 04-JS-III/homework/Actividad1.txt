@@ -1,0 +1,26 @@
+Explicación de Array o Arreglo:
+
+un arreglo es una colección de elementos, como un conjunto de elementos agrupados de alguna manera.
+estos elementos pueden ser de cualquier tipo, por ejemplo, puedo tener un arreglo con algunos numeros,
+strings, funciones, "valores vacios", cualquier tipo de dato puede ir dentro de un arreglo y como todos
+estan dentro de este, lo podemos pensar como que estan agrupados, puedo llamarlos llamando a su arreglo y
+luego la posición de cada elemento usando la siguiente instrucción:
+
+miArreglo[indice]
+
+donde indice es un numero entero que empieza por el 0 para la primer posición y va hasta el ultimo valor
+aumentando de uno en uno.
+
+ejemplo:
+
+miArreglo = [4,"hola","chau" , 3, 8]
+
+este arreglo tiene cinco elementos, y estan ubicados en las posiciones 0,1,2,3,4
+en la posición 1 se encuentra el string "hola"
+
+la forma de llamarlos es la siguiente:
+miArreglo[0]    devuelve    4
+miArreglo[1]    devuelve    "hola"
+miArreglo[2]    devuelve    "chau"
+miArreglo[3]    devuelve    3
+miArreglo[4]    devuelve    8
