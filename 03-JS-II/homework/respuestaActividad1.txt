@@ -1,0 +1,75 @@
+- for
+
+un bucle for es una instrucción de código que se repite hasta cumplir las condiciones que pide dicho bucle.
+un bucle for es de esta manera:
+for(comienzo,fin,incremento){
+    código interno
+}
+
+donde:
+comienzo: aquí se coloca una variable con su valor inicial, esta misma debe alcanzar el valor indicado en fin
+fin: aquí se indica la condición final, es decir que cuando se cumpla esta condición el bucle termina,
+cuando un bucle termina salta todo lo que esta entre las llaves y el programa continua su ejecución
+incremento: aquí es donde se indica de que manera debe incrementarse la variable para pasar del estado inicial
+al final.
+código interno: el código interno se ejecutará en cada vuelta del for.
+ejemplo:
+var contador=0;
+for(i=0;i<10,i++){
+    contador++;
+}
+
+en este caso, el bucle empieza evaluando la declaración "comienzo" i=0, por lo que i toma el valor 0, luego evalua
+la condición fin, como no se cumple continua ejecutandose, evalua el "incremento" y modifica el valor de i,
+aumentandole 1, luego entra al código en su interior, le suma uno a la variable contador y vuelve a empezar
+vuelve a revisar las declaraciones, le suma 1 a i, quedando su valor en 2 y vuelve a entrar, ejecuta el código
+quedando contador en valor 2. De esta manera irá hasta que i sea = 10, en este caso, la declaración i<10 es falsa
+por lo que el bucle terminará, en este punto, contador valdrá 10.
+
+
+- operadores lógicos &&, ||, !
+
+-&&: este operador conocido como "Y", evalua dos condiciones, una a su izquierda y la otra a su derecha,
+si ambas son verdaderas devuelve verdadero, si al menos una es falsa, devuelve falso.
+existen cuatro posibilidades, si tenemos: valorIzquierda como valor de la izquierda y valorDerecha como valor
+de la derecha, nos queda:
+valorIzquierda && valorDerecha
+las posibilidades son que:
+
+valorIzquierda && valorDerecha      resultado
+    verdadero       verdadero       verdadero
+    verdadero       falso           falso
+    falso           verdadero       falso
+    falso           falso           falso
+
+ejemplo:
+
+1==1 && 2==2        verdaredo
+1==1 && 2==3        falso
+1==2 && 2==2        falso
+1==2 && 2==3        falso
+
+
+-||: este operador conocido como "O", es similar al anterior, tambien evalua dos condiciones a izquierda y derecha
+sin embargo la diferencia respecto del "Y" lógico está en que con que al menos una de las condiciones sea
+verdadera, devuelve verdadero. veamos las posibilidades:
+
+valorIzquierda || valorDerecha      resultado
+    verdadero       verdadero       verdadero
+    verdadero       falso           verdadero
+    falso           verdadero       verdadero
+    falso           falso           falso
+
+ejemplo:
+
+1==1 && 2==2        verdaredo
+1==1 && 2==3        verdadero
+1==2 && 2==2        verdadero
+1==2 && 2==3        falso
+
+-!: este operador es conocido como "Negación", lo que hace es cambiar el valor booleano que tenga a su derecha
+es decir, si algo es verdadero pasa a ser falso, y si era falso, pasa a ser verdadero
+veamos un ejemplo:
+
+1==1 es verdadero, pero si hago !(1==1) es valso, sería como decir "no uno igual a uno"
+1==2 es falso, pero !(1==2) es verdadero.
