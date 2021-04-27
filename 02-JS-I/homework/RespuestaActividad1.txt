@@ -1,0 +1,100 @@
+- Variables:
+
+Imagina que la memoria de la computadora es un cajón de escritorio donde puedo guardar cosas,
+dentro de ese cajón, coloco una cajita en la cual a su vez puedo guardar cosas. A esa cajita la llamo Variable
+y es un espacio dentro de la memoria de la computadora, reservado para guardar valores, lo que yo guarde en
+esa cajita puede cambiarse, sacar algo y poner otra cosa, o dejarla vacía, con la variable pasa lo mismo,
+puedo cambiarle los valores o dejarla vacía. Además, puedo decidir que tipos de cosas entran en cada caja,
+por ejemplo, solo guardo lapices o solo guardo gomas, con una variable puedo elegir que solo contenga strings
+o numeros.
+
+
+- Strings:
+
+Los strings son textos, es decir, caracteres que solo pueden leerse pero no pueden hacerse operaciones matematicas
+con ellos. Para indicar que algo es un string en programación, se utilizan comillas dobles o simples. Ejemplo:
+"hola" y 'hola' son strings, tambien lo es "1" o '1231231' pero no es un string 56, ya que no esta entre
+comillas.
+
+
+- Funciones
+
+Las funciones son bloques de codigos que se utilizan para realizar una tarea varias veces y programarla
+una sola vez. Por ejemplo, yo deseo sumar muchas veces dos números distintos, en distintas ocaciones.
+Entonces, para evitar tener que programar la suma cada vez, creo una funcion que realiza esta operación
+a la cual le digo que números pretendo sumar y que lo haga por mi (Aunque en el ejemplo es mas sencillo
+realizar la suma cada vez, hay que imaginarse una operación mucho mas larga y compleja).
+Además las funciones tienen una estructura:
+1 - Function: esta palabra reservada se utiliza para indicar que la palabra que sigue es el nombre
+de mi función.
+2 - Argumentos: luego del nombre, se abren unos parentesis para indicar los argumentos, que son los datos
+que necesita la funcion para operar correctamente, pueden ser de cualquier tipo es decir string, numerico, etc.
+siempre y cuando sean del tipo que necesita la funcion, estos argumentos son opcionales, no todas las funciones
+llevan argumentos y pueden ser la cantidad que el programador desee, si hay mas de uno, se separan por comas.
+Luego de terminar de ingresar los argumentos, se cierran los parentesis.
+3 - Llaves: se abren unas llaves {}, entre estas está todo el contenido que se ejecuta en la función,
+aquí es donde utilizo los argumentos que le pasé.
+4 - Return: la palabra reservada return indica que la función termina su ejecución y devuelve al programa que
+la llamó un valor, luego de esta linea no debe haber codigo porque no se ejecutará. este argumento no es
+obligatorio.
+
+Ejemplo:
+
+function saludo(nombre, apellido){
+    return "Hola " + nombre + " " + apellido;
+}
+
+el nombre de la funcion es saludo, los argumentos en este caso son 2: nombre y apellido, dentro de las llaves
+esta el contenido que es un renglon con la instrucción return, quien devuelve un valor, que en este caso es
+una unión (concatenación) de varios strings, utilizando los valores almacenados en las variables.
+
+
+- Declaraciones if
+
+Las declaraciones if son instrucciones que se utilizan para indicarle a una computadora si debe ejecurar
+o no un codigo y tambien para darle distintos codigos a ejecutar, dependiendo de unas condiciones que
+deben cumplirse.
+Una declaración if, está compuesta por dos partes, la sentencia que va entre parentesis y luego el código,
+la sentencia va entre parentesis y es lo que evalua para decidir si ejecuta el codigo, puede tomar dos valores
+verdadero o falso; TRUE o FALSE, si es verdadero, ejecuta el código entre llaves, en caso contrario lo ignora.
+por ejemplo if(1==1) o if(1==2), en el primer caso es verdadero por lo tanto, se ejecutará el código dentro
+del if, en el segundo caso el programa ignorará el cógido dentro del if.
+if(1==1){
+    return "Hola";
+}
+en este ejemplo el if resuelve que es verdadero y por lo tanto ejecura el código entre llaves (el código en
+su interior).
+if(1==2){
+    return "Chao";
+}
+en este ejemplo el if resuelve que es falso por lo que ignora el codigo en su interior y no retorna valor.
+También se puede agregar mas condiciones a un if, es decir mas alternativas a cumplirse para ejecutar un
+determinado codigo, esto se hace con la instrucción else if.
+if(1==2){
+    return "Hola";
+}else if(2==2){
+    return "Segundo";
+}
+este if evalua si 1 es igual a 2 y luego si 2 es igual a 2, como en el primer caso no entra busca la siguiente
+condición y en este caso es verdadera por lo que se ejecuta y la función devulve el string Segundo.
+se pueden agregar tantos else if como se deseen, el programa evalua desde arriba hacia abajo y cuando entra
+en uno, deja de evaluar haca abajo y ejecuta el contenido de la primera condición verdadera.
+Por último queda un argumento que es else, es similar a los anteriores pero este no evalua ninguna condición
+y se utiliza para indicarle al programa que si todo lo anterior fue falso, ejecute el codigo en su interior
+SI O SI.
+ejemplo:
+if(1==2){
+    return "Hola";
+}else if(3==2){
+    return "Segundo";
+}else{
+    return "si o si";
+}
+en este caso, vemos que las primeras dos condiciones son falsas, por lo que llega al else y ese código se ejecuta
+y el if devuelve el string "si o si".
+
+
+- Valores booleanos
+
+Los valores booleanos, son un tipo de dato que solo puede tener dos valores, TRUE o FALSE, o sea VERDADERO o FALSO.
+Se utilizan en expresiones como el if para decir si se cumple una condición o no y modificar el flujo del programa.
