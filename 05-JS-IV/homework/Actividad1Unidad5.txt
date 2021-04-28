@@ -1,0 +1,120 @@
+                                Objetos
+
+un objeto es una colección de propiedades, en mis palabras, es una agrupación de propiedades, estas pueden
+ser, variables, constantes, funciones, arreglos, etc.
+para hacer mas intuitiva la programación, se creó este paradigma en donde se "construyen" objetos, bloques
+de codigo que simulan el comportamiento conceptualmente hablando, de los objetos del mundo fisico, asi
+el programador puede llevar en su mente la abstracción a la imaginación, logrando mayor claridad mental.
+según el tipo de información almacenada en un objeto decimos que son propiedades o metodos, ya que en la 
+vida real, una propiedad es una característica de un cuerpo, mientras que un metodo, es "lo que hace" un
+cuerpo en el mundo fisico.
+
+ejemplo:
+
+un encendedor en el mundo fisico:
+    catacterísticas(propiedades):
+        color: rojo.
+        peso: 50gr.
+
+    funciones(metodos):
+        crea fuego.
+
+un encendedor en programación(en javascript):
+    var encendedor = {
+        //propiedades:
+        var color: rojo,
+        var peso: 50;
+        //metodos
+        creaFuego: function(){
+            return "Fuego Creado";
+        }
+    }
+
+
+                                Propiedades
+
+la definición teorica dice que es una asociación entre un nombre y un valor, al nombre también se le dice clave
+porque es una palabra "clave" con la que se llama al valor guardado. Ademas, una propiedad debe pertenecer
+a un objeto, es decir, estar definida dentro del mismo, de lo contrario, esta sería una variable o constante
+pero no una propiedad de un objeto.
+cuando el contenido de la variable es una función, se la llama metodo.
+para accedeer a una propiedad, hay dos notaciones:
+    1 - notación de puntos: ejemplo: miObjeto.miMetodo
+    2 - notación de corchetes: ejemlo: miObjeto["miMetodo"]
+
+las diferencias son que la 1° es mas simple para escribir, pero la segunda permite poner una variable que
+haga referencia al nombre del metodo, mientras que la primera no lo permite. ejemplo:
+    var llamaAlMetodo = miMetodo;
+    miObjeto[llamaAlMetodo]; //es posible
+    miObjeto.llamaAlMetodo; //no es posible
+
+en el primer caso, se pone el nombre de la variable que contiene como valor, el nombre del metodo ubicado
+dentro de miObjeto, notese que no lleva comillas, pues es una variable. En el segundo caso, la instrucción
+intentará encontrar un metodo dentro de miObjeto que se llame "llamaAlMetodo", pero no al metodo llamado
+"miMetodo"
+
+
+
+                                Metodos
+
+un metodo es un caso particular de una propiedad en donde el valor asociado al nombre o clave, es una función
+en todo lo demás, es lo mismo que una propiedad, previamente explicada.
+
+
+
+
+                                Bucle for…in
+
+un bucle for ...in, es un bucle diseñado para recorrer objetos, ya que cada propiedad tiene un nombre único,
+creado por el programador, por lo que javascript no puede saber como llamarlas a priori.
+se podría decir que se crea una "clave para la clave de la propiedad" veamoslo con un ejemplo:
+
+    miObjeto = {
+        propiedad1 = "hola";
+        propiedad2 = "chao";
+    }
+
+segun lo que vimos hasta ahora:
+    
+    clave: propiedad1
+    valor: "hola"
+
+    clave: propiedad2
+    valor: "chao"
+
+si yo quiero recorrer cada propiedad el bucle, veo que no hay un patrón o no tiene porque haberlo entre los
+nombres de los propiedades del objeto, para esto se crea una clave cuyo valor es el nombre de cada propiedad en 
+cada vuelta y asi puedo independientemente del nombre de cada propiedad, indicarle a javascript que propiedad
+estoy utilizando, ejemplo:
+
+for(var miClave in miObjeto){
+    miObjeto[miClave];
+}
+
+recordemos que una propiedad es una asociación entre una clave y un valor
+como miObjeto tiene dos propiedades, el bucle realizará dos iteraciones, en la primera, miClave tomara el valor
+propiedad1, y como esta en notación de corchetes, le pasa su valor a miObjeto, luego miObjeto buscará el valor 
+de su propiedad llamado propiedad1 y devolverá "hola", en la segunda vuelta miClave tomará el valor propiedad2
+el cual recibe miObjeto y busca hasta que encuentra esa propiedad y devuelve el valor asociado que es "chao"
+
+de esta manera pudimos hacer iteraciones recorriendo todos los metodos y propiedades de un objeto sin saber los
+nombres de las claves que el usuario definió.
+
+
+                                Notación de puntos vs notación de corchetes
+
+como ya lo expliqué antes, la notación de puntos es una notación mas simple pero menos funcional que la notación
+de corchetes, fue pensada para ganar agilidad a la hora de programar.
+
+    notación de puntos: miObjeto.propiedad1
+
+la notación de corchetes es un poco mas incomoda de utilizar pero es mas funcional, ya que en esta se pueden poner
+claves que contienen los valores de las propiedades y metodos dentro de un objeto, con lo cual se puede modificar
+el funcionamiento de una declaración desde fuera de la misma, se pueden hacer programas escalables.
+
+    notación de corchetes: miObjeto[miClave]
+
+también puede funcionar como la notación de puntos, es decir, puede recibir directamente el valor del metodo o
+propiedad deseao.
+    ejemplo: miObjeto["metodo1"]
+en este caso en necesario pasarle el valor como un string.
