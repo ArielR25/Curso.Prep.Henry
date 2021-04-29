@@ -1,0 +1,43 @@
+                                        
+                                        Prototype
+
+
+cada objeto en javascript tiene un prototype que es un objeto del objeto principal, este objeto tiene la función 
+de almacenar propiedades y metodos, es como un deposito donde guarda propiedades y metodos cualquier
+objeto de javascript, una vez que fue definido un objeto, se crearon sus propiedades y metodos, tambien se crea por
+defecto un objeto asociado a este, el prototype, aquí podemos poner nuevas propiedades y metodos que se fueron 
+creando en el futuro.   
+
+cuando invoco una propiedad de un objeto, javascript buscará dentro de este y si no la encuentra, seguirá buscando
+en el prototype.
+
+cargando propiedades en un prototype:
+
+    miObjeto.prototype.nombrePropiedadNueva = propiedad="valor";
+
+cargando metodos en un prototype:
+
+    miObjeto.prototype.nombreMetodoNuevo = function(){/*contenido*/};
+
+
+
+
+                                        Constructors (de Clases)
+
+un constructor de una clase, es un metodo que se llama con la palabra reservada constructor, y recibe o no parametros
+luego, los almacena en variables en su interior, para poder ser llamadas luego. este constructor va dentro de una clase
+que sería como una plantilla, un objeto que sirve como "molde" para crear objetos con metodos y propiedades en común
+
+ejemplo:
+
+class Persona{
+    constructor(valor1, valor2){
+        this.valor1=valor1;
+        this.valor2=valor2;
+    }
+};
+
+ahora puedo crear diferentes objetos persona que tendran las variables valor1 y valor2, estas variables estan declaradas
+en un mismo lugar por lo que ayudan a ahorrar espacio y hacer un programa mas rapido y eficiente
+
+var juan = new Persona(Gomez, Arg);
