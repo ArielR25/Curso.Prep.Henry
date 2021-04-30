@@ -1,0 +1,12 @@
+                                        Funciones Callback
+
+las funciones Callback son aquellas que se pasan como parametro a otra función. Así de simple...
+
+ejemplo:
+
+function miFuncion(valor1, cb){
+
+}
+
+donde el parametro pasado como cb es una función, por lo tanto esa es una función Callback.
+por convención, se utiliza la palabra cb para dar el nombre de la variable en la que depositará la función Callback.
