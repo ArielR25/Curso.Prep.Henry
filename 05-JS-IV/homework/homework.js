@@ -121,10 +121,16 @@ function pasarUsuarioAPremium(usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código: usuarios.usuario.esPremium
+  /*
   for(i=0; i<usuarios.length; i++){
     usuarios[i].esPremium=true;
   }
   return usuarios;
+  */
+  usuarios.map(function(x){
+   return x.esPremium=true;
+ });
+ return usuarios;
 }
 
 function sumarLikesDeUsuario(usuario) {
@@ -133,12 +139,17 @@ function sumarLikesDeUsuario(usuario) {
   // Cada objeto "post" tiene una propiedad llamada "likes" que es un entero (int/integer)
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
-  // Tu código: usuario.posts.post.likes
+  // Tu código: usuario(obj).posts[array].post(obj).likes(propiedad)
+  /*
   var sumaLikes=0;
   for(i=0; i<usuario.posts.length; i++){
     sumaLikes+= usuario.posts[i].likes;
   }
   return sumaLikes;
+  */
+ return usuario.posts.reduce(function(anterior,actual){
+   return anterior+actual.likes;
+ },0);
 }
 
 function agregarMetodoCalculoDescuento(producto) {
