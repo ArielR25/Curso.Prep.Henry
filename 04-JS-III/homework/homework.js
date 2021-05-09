@@ -77,9 +77,12 @@ function dePalabrasAFrase(palabras) {
   }
   return miFrase;
   */
- return palabras.reduce(function(anterior,actual){
+ /*  
+  return palabras.reduce(function(anterior,actual){
    return anterior+" "+actual;
- });
+  });
+  */
+  return palabras.join(" ");
 }
 
 
